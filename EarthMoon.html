@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth & Moon</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url(https://4kwallpapers.com/images/wallpapers/stars-galaxy-3840x2160-10307.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .container {
+            height: 1000px;
+            width: 750px;
+            position: relative;
+        }
+        .rotate-axis {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            animation: rotate 30s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .earth {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-image: url(https://user-gen-media-assets.s3.amazonaws.com/gemini_images/bc2831a7-d2c5-484b-bc20-fd0a75d0aff2.png);
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } 
+        .moon-orbit {
+            height: 1000px;
+            width: 750px;
+            animation: revolve 60s linear infinite;
+        }   
+        .moon {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-image: url(https://user-gen-media-assets.s3.amazonaws.com/gemini_images/02d0a111-7f4e-43cc-85ca-a981780783f5.png);
+            background-size: cover;
+            position: absolute;
+            top: 20%;
+            transform: translateY(-50%);
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes revolve {
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rotate-axis">
+        <div class="earth"></div>
+        </div>
+        <div class="moon-orbit">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>
